@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>&nbsp;Jonathan Acuña Herrera</title>
+    <script src="script.js" type="text/javascript" defer></script>
+    <meta name="description" content="Portafolio secreto con forma de terminal. Please don't share."/>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/confetti-js@0.0.17/dist/index.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/confetti-js@0.0.17/dist/index.min.js"></script>
+  </head>
+
+  <body>
+    <canvas id="canvas"></canvas>
+    <section>
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns">
+            <div class="column is-flex">
+              <div class="column-child terminal shadow">
+                
+                <div class="terminal-bar dark-mode">
+                  <div class="icon-btn close"></div>
+                  <div class="icon-btn min"></div>
+                  <div class="icon-btn max"></div>
+                  <div class="terminal-bar-text is-hidden-mobile dark-mode-text">
+                    user@Cv_J.A.H: ~
+                  </div>
+                </div>
+
+                 
+                <div class="terminal-window primary-bg" onclick="document.getElementById('promtInputhelp').focus();">
+                <!--   
+                  <div class="terminal-output" id="terminalOutput">
+                    <div class="terminal-line">
+                      <span class="help-msg"> Welcome to my portfolio! — Type <span class="code">help</span> for a list of supported commands.</span>
+                    </div>
+                  </div>
+
+                  <div class="terminal-line">
+                    <span class="success">➜</span>
+                    <span class="directory">~</span>
+                    <span class="user-input" id="userInput"></span>
+                    <input type="text" id="dummyKeyboard" class="dummy-keyboard" autocomplete="off"/>
+                  </div>
+                -->
+
+                  <div class="terminal-output" id="terminalOutput">
+                    
+                    <main>
+                      <div class="terminal" id="terminalWindow" >
+                        <section id="terminal">
+                          <div class="command">Successful login - <span class="command" id="date"></span></div>
+                          <div class="title"> Mi Portafolio - CV</div>
+                          <span class="help-msg"> ¡Bienvenido a mi portafolio! — Escriba <span class="code">help</span> para obtener una lista de los comandos admitidos.</span>
+                          <br><br/> 
+                        </section>
+                        <span class="success">➜</span>
+                        <span class="directory">user $ </span>
+                        <input id="promtInput"/>
+                        
+                      </div>
+                    </main>
+
+                  </div>
+
+    
+                  <div class="hidden" id="promptClone">
+                    <span class="success">$</span> <span class="directory">user</span> <span class="promtCloneInput"></span>
+                    <div class="promtCloneContent"></div>
+                  </div>
+
+                  <div class="hidden" id="help">
+                    <div class="sectionTitle">Puedes ingresar cualquiera de estos comandos: </div>
+                    <div class="indent">
+                      <div>
+                        <span class="command">about</span>:
+                        <div class="indent">Resumen profesional sobre mi.</div> 
+                      </div>
+                      <div>
+                        <span class="command">social</span>:
+                        <div class="indent">Redes sociales de contacto.</div> 
+                      </div>
+                      <div>
+                        <span class="command">skills</span>:
+                        <div class="indent">Algunas herramientas con las que he trabajado.</div> 
+                      </div>
+                      <div>
+                        <span class="command">education</span>:
+                        <div class="indent">Todo sobre mi formación.</div> 
+                      </div>
+                      <div>
+                        <span class="command">experience</span>:
+                        <div class="indent">Donde trabajé hasta ahora.</div> 
+                      </div>
+                      <!--
+                      <div>
+                        <span class="command">projects</span>:
+                        <div class="indent">Un listado de mis proyectos</div> 
+                      </div>
+                      -->
+
+                      <div>
+                        <span class="command">clear</span>:
+                        <div class="indent">Borrar el historial de la terminal.</div> 
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="hidden" id="about">
+                    <div class="sectionTitle" align="center" >Sobre mi: </div>
+                      <div class="indent" align="justify">
+                        Hola! mi nombre es <span class="command">Jonathan Acuña Herrera</span>, entusiasta con ganas de ser un aporte dentro del equipo de trabajo y a la vez seguir aprendiendo de las personas y de las nuevas tecnologías. Me adapto a los cambios y trabajo de forma metodológica. Durante mi proceso educativo y profesional he participado en variados proyectos, generalmente con un fuerte 
+                        foco en el manejo de los datos, colaborando en el análisis, diseño e implementación del software, utilizando
+                        tecnologías tradicionales y otras más contingentes como lo son la computación paralela, Big Data y con algunos 
+                        conceptos de inteligencia artificial.
+                        <br><br/> 
+
+                        Cuento con aproximadamente 4 años de experiencia laboral en el campo de la informática, de los cuales pasé 3 años desempeñándome como Analista/Consultor en Deloitte, enfocándome principalmente en proyectos relacionados con el manejo de datos. Posteriormente, tuve la oportunidad de trabajar en el Banco Estado como desarrollador Full Stack, donde colaboré en el desarrollo de un nuevo servicio para la aplicación de la compañia.
+                        <br><br/> 
+
+                        Durante mi tiempo en Deloitte, participé activamente en proyectos que requerían un sólido conocimiento en el área de datos. Mis responsabilidades incluían la participación en procesos de toma de requerimientos, desarrollo e implementación de la solución, la creación de documentación técnica, el desarrollo de procesos de extracción, transformación y carga de datos (ETL), así como el análisis y modelado de datos. Además, fui responsable de la creación y mantenimiento de consultas a bases de datos, la resolución de incidentes y la limpieza de datos, entre otras tareas.
+                        <br><br/> 
+
+                        Al unirme al Banco Estado, asumí un rol de desarrollador Full Stack y participé en el desarrollo de un nuevo servicio para el pago del transporte público mediante un codigo QR. Durante este proyecto trabaje con Angular, Node.js, GitLab y otras herramientas relevantes para implementar la funcionalidad requerida.
+                        <br><br/> 
+
+                        Es relevante mencionar que todos los proyectos en los que participé fueron gestionados utilizando metodologías ágiles, lo que me permitió trabajar de manera colaborativa y entregar resultados de manera eficiente. Además, he adquirido experiencia tanto en trabajos remotos como presenciales, lo que me ha brindado la capacidad para adaptarme a diferentes entornos de trabajo.
+                        <br><br/> 
+
+                      <div align="center" ><img src="ch.jpg" align="center"></div>
+
+                  </div>
+
+                  <div class="hidden" id="projects">
+                    <div class="sectionTitle">Proyectos: </div>
+                    <div class="indent">
+                      <a href="edad.html" target="_blank"><span class="title">1. Edad exacta</span></a> - <span class="command">Link a github</span> </a>
+                    </div>
+                    <div class="indent">
+                      <span class="title">Proyecto 2 </span> - <a href="https://github.com/user/proyecto" target="_blank"><span class="command">Link a github</span> </a>
+                    </div>
+                    <div class="indent">
+                      <span class="title">Proyecto 3 </span> - <a href="https://github.com/user/proyecto" target="_blank"><span class="command">Link a github</span> </a>
+                    </div>
+                  </div>
+
+                  <div class="hidden" id="skills">
+                    <div class="sectionTitle" align="center">Skills: </div>
+                    <div class="indent">
+                      <span class="title2">Sistemas Operativos:</span>
+                      <div>
+                        <span class="command">Windows - Linux (Ubuntu, Mint, Debian) - Unix. <br><br/></span>
+                      </div>
+
+                      <span class="title2">Lenguajes de Programación:</span>
+                      <div>
+                        <span class="command"> Php - Java - C/C++ - Ruby - Python - Kotlin. <br><br/></span>
+                      </div>
+
+                      <span class="title2">Manejo en Base de Datos:</span>
+                      <div>
+                        <span class="command"> Sql Server - Oracle - MySql - PostgreSQL. <br><br/></span>
+                      </div>
+
+                      <span class="title2">Ámbito Web:</span>
+                      <div>
+                        <span class="command"> Html - Html5 - CSS - JavaScript - jQuery - Bootstrap.<br><br/></span>
+                      </div>
+
+                      <span class="title2">Utilización de Framework:</span>
+                      <div>
+                        <span class="command">  Laravel - AngularJS - Node js - Hadoop (Hive, Impala, Flume, Sqoop, Spark) <br><br/></span>
+                      </div>
+
+                      <span class="title2">Otras Herramientas:</span>
+                      <div>
+                        <span class="command"> Git - UML - Microsoft Office (Word, Powerpoint, Excel, Access, Project, Visio) - Odi 12c - SQL Server Integration Services (SSIS) - IBM InfoSphere DataStage - Tableau - Arduino - otros.<br><br/></span>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="hidden" id="experience">
+                    <div class="sectionTitle" align="center">Experiencia:<br><br/> </div>
+                    
+                    <div class="indent">            
+                      <span class="title2">Implementación pago de pasaje mediante QR - Banco Estado</span> - <span class="command">(Oct. 2021 – Mar. 2022)</span>
+                      <div class="indent" align="justify">
+                        Colaboración en el desarrollo de un nuevo producto dentro de la app del banco Estado que permitiese a sus clientes pagar el pasaje 
+                        del transporte publico mediante la generación de un código QR en su celular. Mis funciones principales eran las
+                        de un desarrollador full stack, escribiendo código, dentro de AngularJS, tanto para el front-end como el back-end 
+                        de la aplicación.
+                        <br><br/>
+                        <span class="code">Herramientas principales: Unix, AngularJS - Node js - Git- Microsoft Office. <br><br/></span> 
+                      </div>
+
+                    </div>
+
+                    <div class="indent">
+                      <span class="title2">Levantamiento de requerimientos – Banco Santander - Deloitte</span> - <span class="command">(Ene. 2021 – Set. 2021)</span>
+                      <div class="indent" align="justify">
+                        Colaboré en la creación de un nuevo sistema de gestión para el banco Santander utilizando herramientas del ecosistema de
+                        Hadoop. Las tareas principales dentro de este proyecto iban desde la participación de reuniones de 
+                        levantamiento y entendimiento de la situación actual, la creación de un modelo de datos que soportara los 
+                        requerimientos del negocio y el desarrollo de consultas para la ingesta de datos al datalake.
+                        <br><br/>
+                        <span class="code">Herramientas principales: Impala - Hive - Sqoop - Spark - Python - Git -Microsoft Office. <br><br/></span> 
+                      </div> 
+                    </div>
+
+                    <div class="indent">
+                      <span class="title2">Automatización de un modelo de provisión – ABCDIN - Deloitte</span> - <span class="command">(Jul. 2020 – Feb. 2021)</span>
+                      <div class="indent" align="justify">
+                        Participación en la traducción de consultas (de MySql a Amazon Athena) e implementación de ETL’s utilizando la herramienta “IBM
+                        Datastage Designer”.
+                        <br><br/>
+                        <span class="code">Herramientas principales: IBM Datastage- Oracle - Oracle SQL Developer - Python - Microsoft Office.<br><br/></span> 
+                      </div> 
+                    </div>
+
+
+
+                  </div>
+
+                  <div class="hidden" id="social">
+                    <div class="sectionTitle" align="center">Redes sociales: </div>
+                    <div class="indent">
+                      <img src="rs_gh.png" width="20" height="20">
+                      <span class="title">Github</span> - <a class="command" href="https://github.com/PrimerCodigo" target="_blank">https://github.com/PrimerCodigo</a>
+                    </div>
+                    <div class="indent">
+                      <img src="rs_in.png" width="20" height="20">
+                      <span class="title">LinkedIn</span> -
+                      <a class="command" href="https://www.linkedin.com/in/jonathanacuñaherrera/" target="_blank">https://www.linkedin.com/in/jonathanacuñaherrera/</a>
+                    </div>
+                    <div class="indent">
+                      <img src="rs_gm.png" width="20" height="20">
+                      <span class="title">Gmail</span> - 
+                      <a class="command" href="mailto:jonathan.acunaherrera@gmail.com">jonathan.acunaherrera@gmail.com<br><br/></a>
+                    </div>
+                    <!--
+                    <div class="indent">
+                      <img src="rs_in.png" width="20" height="20">
+                      <span class="title">CV</span> -
+                      <a class="command" href="CV_Jonathan_Acuña_H.pdf" target="_blank">Descarga My CV<br><br/></a>
+                    </div>
+                    -->
+
+                  </div>
+
+                  <div class="education hidden" id="education">
+                    <div class="sectionTitle" align="center" >Formación:<br></br></div>
+                    <div class="indent">
+                      <span class="title2">Ing. Civil en Computación, mención en informática - Universidad Tecnológica Metropolitana (UTEM).</span> <span class="command"></span>
+                      <div class="indent">
+                        Me considero también una persona curiosa, autodidacta y con muchas ganas de seguir aprendiendo cosas nuevas.
+                        <br><br/>
+                      </div> 
+                    </div>
+                    <div class="indent">
+                      <span class="title2">AWS Certified Cloud Practitioner - Online</span> <span class="command"></span>
+                      <div class="indent">
+                        ID Credencial: QSZJEJTJJM4QQ5W3 -
+                        <a class="code" href="https://aw.certmetrics.com/amazon/public/verification.aspx" target="_blank">Mostrar Credencial</a>
+                        <br></br>
+                      </div> 
+                    </div>
+                  </div>
+
+                  <div class="hidden" id="edad">
+                    <a class="code" href="edad.html" target="_blank"></a>
+                    <div class="sectionTitle">Proyectos: </div>
+                    <div class="indent">
+                      <span class="title">Proyecto 1 </span> - <a href="https://github.com/user/proyecto" target="_blank"><span class="command">Link a github</span> </a>
+                    </div>
+                    <div class="indent">
+                      <span class="title">Proyecto 2 </span> - <a href="https://github.com/user/proyecto" target="_blank"><span class="command">Link a github</span> </a>
+                    </div>
+                    <div class="indent">
+                      <span class="title">Proyecto 3 </span> - <a href="https://github.com/user/proyecto" target="_blank"><span class="command">Link a github</span> </a>
+                    </div>
+                  </div>
+
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>    
+
+    </section>
+    <!-- <script src="script.js"></script> -->
+
+    <footer class="footer">
+        <div class="content has-text-centered">
+          <p>💙💻  Desarrollado por Jonathan Acuña Herrera V0.1 - Junio 2023 💻💙.</p> Please don't share. Sensitive information.
+
+        </div>
+      </footer>
+  </body>
+
+</html>
+<!--  -->

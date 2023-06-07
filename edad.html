@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculador de edad</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    
+    h1 {
+      margin-bottom: 20px;
+    }
+    
+    input {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Calculadora de Edad</h1>
+  <label for="birthdate">Fecha de Nacimiento:</label>
+  <input type="date" id="birthdate">
+  <br>
+  <button onclick="calculateAge()" onclick="calculateAge2()">Calcular</button>
+  <br>
+  <p id="result"></p>
+  <br>
+  <p>O </p>
+  <p id="result2"></p>
+  
+  <script>
+    function calculateAge() {
+      var birthdate = document.getElementById('birthdate').value;
+      var birthdateObj = new Date(birthdate);
+      var now = new Date();
+      
+      var ageInMilliseconds = now - birthdateObj;
+      
+      var millisecondsPerYear = 1000 * 60 * 60 * 24 * 365.25;
+      var ageInYears = Math.floor(ageInMilliseconds / millisecondsPerYear);
+      
+      var millisecondsPerMonth = millisecondsPerYear / 12;
+      var ageInMonths = Math.floor(ageInMilliseconds / millisecondsPerMonth);
+      
+      var millisecondsPerDay = 1000 * 60 * 60 * 24;
+      var ageInDays = Math.floor(ageInMilliseconds / millisecondsPerDay);
+      
+      var millisecondsPerHour = 1000 * 60 * 60;
+      var ageInHours = Math.floor(ageInMilliseconds / millisecondsPerHour);
+      
+      var millisecondsPerMinute = 1000 * 60;
+      var ageInMinutes = Math.floor(ageInMilliseconds / millisecondsPerMinute);
+      
+      var ageInSeconds = Math.floor(ageInMilliseconds / 1000);
+      
+      var ageInMicroseconds = ageInMilliseconds * 1000;
+      
+      var result = 'Tu edad es: ' + ageInYears + ' años, ' + ageInMonths + ' meses, ' + ageInDays + ' días, ' + ageInHours + ' horas, ' + ageInMinutes + ' minutos, ' + ageInSeconds + ' segundos y ' + ageInMicroseconds + ' microsegundos.';
+      calculateAge2()
+      
+      document.getElementById('result').textContent = result;
+    }
+
+    function calculateAge2() {
+      var birthdate = document.getElementById('birthdate').value;
+      var birthdateObj = new Date(birthdate);
+      var now = new Date();
+      
+      var ageInMilliseconds = now - birthdateObj;
+      
+      var millisecondsPerYear = 1000 * 60 * 60 * 24 * 365.25;
+      var ageInYears = Math.floor(ageInMilliseconds / millisecondsPerYear);
+      
+      var millisecondsPerMonth = millisecondsPerYear / 12;
+      var ageInMonths = Math.floor((ageInMilliseconds % millisecondsPerYear) / millisecondsPerMonth);
+      
+      var millisecondsPerDay = 1000 * 60 * 60 * 24;
+      var ageInDays = Math.floor((ageInMilliseconds % millisecondsPerMonth) / millisecondsPerDay);
+      
+      var millisecondsPerHour = 1000 * 60 * 60;
+      var ageInHours = Math.floor((ageInMilliseconds % millisecondsPerDay) / millisecondsPerHour);
+      
+      var millisecondsPerMinute = 1000 * 60;
+      var ageInMinutes = Math.floor((ageInMilliseconds % millisecondsPerHour) / millisecondsPerMinute);
+      
+      var ageInSeconds = Math.floor((ageInMilliseconds % millisecondsPerMinute) / 1000);
+      
+      var ageInMicroseconds = ageInMilliseconds * 1000;
+      
+      var result = 'Tu edad es: ' + ageInYears + ' años, ' + ageInMonths + ' meses, ' + ageInDays + ' días, ' + ageInHours + ' horas, ' + ageInMinutes + ' minutos, ' + ageInSeconds + ' segundos y ' + ageInMicroseconds + ' microsegundos.';
+
+      document.getElementById('result2').textContent = result;
+    }
+  </script>
+</body>
+</html>
